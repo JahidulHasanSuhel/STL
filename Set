@@ -5,6 +5,7 @@
 #include<bits/stdc++.h>
 #include<conio.h>
 #include<set>   
+#include<functional>
 using namespace std;
 class person{
     public:
