@@ -1,0 +1,50 @@
+// Multiet is an associative container that contains a sorted set of duplicate objects of type key.
+// insertion, removal, search have logarithmic complexity
+
+#include<bits/stdc++.h>
+#include<conio.h>
+#include<set>  
+#include<functional> 
+using namespace std;
+
+
+int main(){
+system("cls");
+multiset<int> multiset = {5,2,4,3,2,5};
+multiset.insert(24);
+  for(const auto& e: multiset){
+    cout <<e <<endl;
+  }
+  getch();
+  return 0;
+}
+
+
+// user defined
+#include<bits/stdc++.h>
+#include<conio.h>
+#include<set>  
+#include<functional> 
+using namespace std;
+class person{
+    public:
+    float age;
+    string name;
+    bool operator < (const person& s1) const {return age < s1.age;}
+    
+    bool operator > (const person& s1) const {return age > s1.age;}
+    // for greater/descending order 
+};
+ 
+int main(){
+system("cls");
+
+multiset<person, std::greater<>> multiset = {{25, "sarif"}, {22, "arif"}};
+
+
+  for(const auto& e: multiset){
+    cout <<e.age <<" " <<e.name <<endl;
+  }
+  getch();
+  return 0;
+}
