@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+#include<conio.h>
+using namespace std;
+ 
+int main(){
+system("cls");
+  unordered_map<int, char> umap = {{1,'a'},{2,'b'}};
+  //Access
+  cout<<umap[1] <<endl;
+  cout<<umap[2] <<endl;
+
+  //Update
+  umap[1] = 'c';
+
+  //Iterate
+  for(auto &i: umap){
+    cout<< i.first <<" " << i.second <<" ";
+  } cout<<endl;
+
+  //Find
+  auto result = umap.find(2);
+  if(result != umap.end()){
+    cout<<"Found "<< result->first <<" " <<result->second <<'\n';
+  } 
+  else{
+    cout<< "Not Found";
+  }
+
+  getch();
+  return 0;
+}
